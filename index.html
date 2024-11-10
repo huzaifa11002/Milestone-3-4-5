@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>FREE RESUME GENERATOR</h1>
+    </header>
+    <div class="main">
+        <div class="warpper">
+            <div class="content-center">
+                <section class="editor">
+                    <h1>Edit Resume</h1>
+                        <form id="form">
+                        <h2>Personal INFO</h2>
+                        <div class="info" id="p-info">
+                            <input type="text" placeholder="Enter Your Fullname*" id="fname" required>
+                            <input type="text" placeholder="Enter Your Gardian Name" id="gardian" required>
+                            <input type="text" placeholder="Enter Your Email*" id="mail" required>
+                            <input type="text" placeholder="Enter Your Phone*" id="phone" required>
+                            <input type="text" placeholder="Enter Your Nationality*" id="nati" required>
+                            <input type="text" placeholder="Enter Your Address*" id="address" name="address" required>
+
+                                    <select name="gender" id="gender" required>
+                                        <option value="" selected disabled>Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                <select name="status" id="status" required>
+                                    <option value="" selected disabled>Status</option>
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Widow">Widow</option>
+                                    <option value="Widower">Widower</option>
+                                </select>
+                            
+                            <div class="radio-btn">
+                                <h2 style="white-space: nowrap;">Date of Birth:</h2>
+                                <input type="date" id="dob" required>
+                            </div>
+
+                        </div>
+
+                        <h2>Education</h2>
+                        <div class="info">
+                            <input type="text" placeholder="Comma Seperated Add Value" id="edu" required>
+                        </div>
+
+                        <h2>Skills</h2>
+                        <div class="info">
+                            <input type="text" placeholder="Comma Seperated Add Value" id="skills" required>
+                        </div>
+
+                        <h2>Work Experience</h2>
+                        <div class="info">
+                            <input type="text" placeholder="Comma Seperated Add Value" id="experience" required>
+                        </div>
+
+                        <h2>Languages</h2>
+                        <div class="info">
+                            <input type="text" placeholder="Comma Seperated Add Value" id="lang" required>
+                        </div>
+                        
+                        <h2>Choose File for Profile</h2>
+                        <div class="info">
+                            <input type="file" id="file" accept="image/*" required>
+                        </div>
+
+                        <div class="submit-btn">
+                            <button id="sub-btn">Submit</button>
+                        </div>
+                    </form>    
+                </section>
+
+                <div class="ready" id="form-output">
+                    <section class="sec1">
+                        <h1 id="p-name"></h1>
+                        <img alt="profile" id="pic">
+                    </section>
+                    <section class="sec3">
+                        <div class="wrapper">
+                            <h2>Personal Info</h2>
+                            <ul>
+                                <li>
+                                    <h3>Gradian Name: <span id="g-name"></span></h3>
+                                </li>
+                                <li>
+                                    <h3>Date of Birth: <span id="p-dob"></span></h3>
+                                </li>
+                                <li>
+                                    <h3>Email: <span id="p-mail"></span></h3>
+                                </li>
+                                <li>
+                                    <h3>Phone: <span id="p-phone"></span></h3>
+                                </li>
+                                <li>
+                                    <h3>Gender: <span id="p-gen"></span></h3>
+                                </li>
+                                <li>
+                                    <h3>National: <span id="p-nat"></span></h3>
+                                </li>
+                                <li>
+                                    <h3>Martial Status: <span id="p-sta"></span></h3>
+                                </li>
+                                <li>
+                                    <h3>Address: <span id="p-add"></span></h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sec4">
+                        <div class="wrapper">
+                            <h2>Education</h2>
+                            <ul id="edu-li">
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sec5">
+                        <div class="wrapper">
+                            <h2>Skills</h2>
+                            <ul id="skill-li">
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sec6">
+                        <div class="wrapper">
+                            <h2>Work Experience</h2>
+                            <ul id="exp-li">
+                                
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sec7">
+                        <div class="wrapper">
+                            <h2>Languages</h2>
+                            <ul id="lang-li">
+                            </ul>
+                        </div>
+                    </section>
+                    <div class="submit-btn">
+                        <button id="print">Print</button>
+                        <button id="edited" onclick="edited()">Editable</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="java.js"></script>
+</body>
+
+</html>
